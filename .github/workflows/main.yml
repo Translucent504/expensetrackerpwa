@@ -35,5 +35,5 @@ jobs:
       run: yarn build
     
     - name: Surge Deployment
-      run: surge ./build eru-pwa-expensetracker.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
+      run: surge ./build https://eru-pwa-expensetracker.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
         
