@@ -1,0 +1,29 @@
+.income-expense-container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    font-size: 1.7rem;
+    font-weight: 100;
+    background-color: aliceblue;
+}
+.income{
+    color: rgb(4, 136, 4);
+}
+
+.expense {
+    color: red;
+}
+.income, .expense {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width:48%;
+    text-align: center;
+}
+
+.income h4,.expense h4 {
+    margin: 5px 0 0 0;
+}

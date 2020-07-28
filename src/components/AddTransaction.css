@@ -1,0 +1,23 @@
+.add-transaction-container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.add-transaction-container h3 {
+    margin: auto;
+}
+
+.new-transaction-name,
+.new-transaction-amount {
+    font-size: 1.5rem;
+}
+
+.new-transaction-button {
+    font-size: 1rem;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 60%;
+}

@@ -1,0 +1,10 @@
+.transaction-list {
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.guide-text {
+    text-align: center;
+    color: darkgray;
+}

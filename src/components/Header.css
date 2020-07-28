@@ -1,0 +1,12 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid black 1px;
+}
+
+.header-text {
+    margin:0;
+    font-size: 4em;
+    margin:auto;
+}
