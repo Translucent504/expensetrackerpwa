@@ -7,5 +7,6 @@
     border: dashed black 1px;
     font-family: monospace;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    min-width: fit-content;
+    width: minmax(100vw, fit-content);
+    overflow:hidden;
 }

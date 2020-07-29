@@ -13,7 +13,7 @@ const IncomeExpense:React.FC<{transactions: transaction[]}> = ({ transactions })
         <div className="income-expense-container">
             <div className="income">
                 <h4>Income</h4>
-                <h4>{ic.income.toLocaleString(undefined, {
+                <h4 className="income-amount">{ic.income.toLocaleString(undefined, {
                     style: 'currency',
                     currency: 'USD',
                     minimumFractionDigits: 2,
@@ -22,7 +22,7 @@ const IncomeExpense:React.FC<{transactions: transaction[]}> = ({ transactions })
             </div>
             <div className="expense">
                 <h4>Expense</h4>
-                <h4>{ic.expense.toLocaleString(undefined, {
+                <h4 className="expense-amount">{ic.expense.toLocaleString(undefined, {
                     style: 'currency',
                     currency: 'USD',
                     minimumFractionDigits: 2,

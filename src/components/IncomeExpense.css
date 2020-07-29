@@ -6,11 +6,11 @@
     font-weight: 100;
     background-color: aliceblue;
 }
-.income{
+.income-amount{
     color: rgb(4, 136, 4);
 }
 
-.expense {
+.expense-amount {
     color: red;
 }
 .income, .expense {
