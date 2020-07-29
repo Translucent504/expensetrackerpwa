@@ -1,7 +1,7 @@
 import React from 'react'
 import './IncomeExpense.css'
 
-const IncomeExpense = ({ transactions }) => {
+const IncomeExpense:React.FC<{transactions: transaction[]}> = ({ transactions }) => {
     const ic = transactions.reduce((p, c) => {
         if (c.amount > 0) {
             return { ...p, income: p.income + c.amount }

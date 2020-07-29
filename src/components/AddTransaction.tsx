@@ -1,22 +1,30 @@
 import React, { useState } from 'react'
 import './AddTransaction.css'
 
-const AddTransaction = ({ handleAdd }) => {
+type Props = {
+    handleAdd: (transaction: transaction) => void;
+}
+
+const AddTransaction: React.FC<Props> = ({ handleAdd }) => {
     const [transactionName, setTransactionName] = useState('');
     const [transactionAmount, setTransactionAmount] = useState(0);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
+        
         e.preventDefault()
-        handleAdd({
-            name: transactionName,
-            amount: parseFloat(transactionAmount),
-        })
+        if (transactionAmount !== 0) {
+            handleAdd({
+                name: transactionName,
+                amount: transactionAmount,
+            })
+        }
+
         setTransactionName('')
         setTransactionAmount(0)
     }
 
     return (
-        <form onSubmit={handleSubmit} >
+        <form className='transaction-form' onSubmit={handleSubmit} >
             <fieldset className="add-transaction-container" >
                 <legend>Add Transaction</legend>
                 <input required value={transactionName}
@@ -25,7 +33,7 @@ const AddTransaction = ({ handleAdd }) => {
                     placeholder='Transaction Name'
                     className="new-transaction-name" />
                 <input required value={transactionAmount}
-                    onChange={e => setTransactionAmount(e.target.value)}
+                    onChange={e => setTransactionAmount(parseFloat(e.target.value))}
                     type="number"
                     className="new-transaction-amount" />
                 <button className="new-transaction-button">Submit</button>

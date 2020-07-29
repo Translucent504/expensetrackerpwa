@@ -1,9 +1,15 @@
 import React from 'react'
 import './Transaction.css'
 
-const Transaction = ({transaction, handleDelete, index}) => {
+type Props = {
+    transaction: transaction;
+    handleDelete: (index: number) => void;
+    index: number;
+}
+
+const Transaction:React.FC<Props> = ({transaction, handleDelete, index}) => {
     return (
-        <div className="transaction">
+        <div data-testid="transaction" className="transaction">
             <div className="transaction-name" >{transaction.name}</div>
             <div className="transaction-amount">{transaction.amount}</div>
             <button onClick={() => handleDelete(index)} className="delete-transaction">X</button>

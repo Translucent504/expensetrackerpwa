@@ -1,7 +1,11 @@
 import React from 'react'
 import './Balance.css'
 
-const Balance = ({ transactions }) => {
+type Props = {
+    transactions: transaction[];
+}
+
+const Balance: React.FC<Props> = ({ transactions }) => {
     const balance = transactions.map(t => t.amount).reduce((p, c) => p + c, 0)
     return (
         <div className="balance-container">

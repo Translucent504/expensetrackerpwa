@@ -7,13 +7,12 @@ import TransactionList from './components/TransactionList';
 import AddTransaction from './components/AddTransaction';
 
 function App() {
-  const [transactions, setTransactions] = useState([])
-
-  const handleDelete = (index) => {
+  const [transactions, setTransactions] = useState<transaction[]>([])
+  const handleDelete = (index: number) => {
     setTransactions(transactions.slice(0, index).concat(transactions.slice(index + 1)))
   }
 
-  const handleAdd = (transaction) => {
+  const handleAdd = (transaction: transaction) => {
     setTransactions(transactions.concat([transaction]))
   }
 
