@@ -5,6 +5,7 @@ import Balance from './components/Balance'
 import IncomeExpense from './components/IncomeExpense';
 import TransactionList from './components/TransactionList';
 import AddTransaction from './components/AddTransaction';
+import './firebaseInit'
 
 function App() {
   const [transactions, setTransactions] = useState<transaction[]>([])
@@ -15,6 +16,8 @@ function App() {
   const handleAdd = (transaction: transaction) => {
     setTransactions(transactions.concat([transaction]))
   }
+
+
 
   return (
     <div className="App">
